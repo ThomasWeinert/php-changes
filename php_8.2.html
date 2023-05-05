@@ -1,0 +1,160 @@
+<section>
+  <h2>PHP 8.2</h2>
+</section>
+
+<section>
+  <h3>Types: Disjoint Normal Form</h3>
+  <div class="center">
+    <nav class="links">
+      <a href="https://wiki.php.net/rfc/dnf_types">rfc/dnf_types</a>
+    </nav>
+  </div>
+  <pre><code
+    data-sample="./examples/PHP_8.2/types-dnf.php#2-99"
+    class="language-php"></code></pre>
+  <ul>
+    <li>A|B|C</li>
+    <li>A|B|(C&D)</li>
+    <li>(A&B&C)|null</li>
+  </ul>
+</section>
+<section>
+  <h3>Types: Standalone</h3>
+  <div class="center">
+    <nav class="links">
+      <a href="https://wiki.php.net/rfc/true-type">rfc/true-type</a>
+      <a href="https://wiki.php.net/rfc/null-false-standalone-types">rfc/null-false-standalone-types</a>
+    </nav>
+  </div>
+  <pre><code data-sample="./examples/PHP_8.2/types-standalone.php#2-99" class="language-php"></code></pre>
+</section>
+
+<section>
+  <h3>Readonly Classes</h3>
+  <pre data-badge="PHP 8.2"><code data-sample="./examples/PHP_8.2/readonly-classes.php#3-6" class="language-php"></code></pre>
+  <pre data-badge="PHP 8.1"><code data-sample="./examples/PHP_8.2/readonly-classes.php#9-99" class="language-php"></code></pre>
+</section>
+
+<section>
+  <h3>Allow Dynamic Properties Attribute</h3>
+  <pre><code class="language-php">#[AllowDynamicProperties]
+class User() {}</code></pre>
+</section>
+
+<section>
+  <h3>Constants in Traits</h3>
+  <pre><code data-sample="./examples/PHP_8.2/trait-constants.php#2-99" class="language-php"></code></pre>
+</section>
+
+<section>
+  <h3>Sensitive Parameter Attribute</h3>
+  <pre><code
+    style="font-size: 70%;"
+    data-sample="./examples/PHP_8.2/sensitive-parameter.php#2-5" class="language-php"></code></pre>
+  <pre><code
+    style="font-size: 70%;"
+    data-sample="./examples/PHP_8.2/sensitive-parameter.php#7-16"></code></pre>
+</section>
+
+<section>
+  <h3>Random Extension</h3>
+  <div class="center">
+    <nav class="links">
+      <a href="https://wiki.php.net/rfc/rng_extension">rfc/rng_extension</a>
+    </nav>
+  </div>
+  <ul>
+    <li>Moved existing functions</li>
+    <li>Engines</li>
+    <li><code>Random</code> Namespace</li>
+    <li><code>Random\Randomizer</code> Class</li>
+  </ul>
+</section>
+
+<section>
+  <h3>Parse INI quantity values</h3>
+  <pre><code class="language-php">ini_parse_quantity('256M'); // 268435456       </code></pre>
+</section>
+
+<section>
+  <h3>
+    <span style="text-transform: lowercase">mysqli::execute_query()</span>
+  </h3>
+  <div class="center">
+    <nav class="links">
+      <a href="https://wiki.php.net/rfc/mysqli_execute_query">rfc/mysqli_execute_query</a>
+    </nav>
+  </div>
+  <pre><code
+    data-sample="./examples/PHP_8.2/mysqli-execute-query.php#2-99"></code></pre>
+</section>
+
+<section>
+  <h3>Retrieve Cipher Key Length</h3>
+  <pre><code class="language-php">openssl_cipher_key_length("CHACHA20-POLY1305"); // 32
+openssl_cipher_key_length("AES-128-GCM"); // 16
+openssl_cipher_key_length("AES-256-GCM"); // 32</code></pre>
+</section>
+
+<section>
+  <h3>Reset Memory Peak Usage</h3>
+  <pre><code
+    data-sample="./examples/PHP_8.2/reset-memory-peak-usage.php#2-99"></code></pre>
+</section>
+
+<section>
+  <h3>
+    PCRE Modifier:
+    <span style="text-transform: lowercase">n</span>
+  </h3>
+</section>
+
+<section>
+  <h3>Deprecated: Dynamic Properties</h3>
+  <div class="center">
+    <nav class="links">
+      <a href="https://wiki.php.net/rfc/deprecate_dynamic_properties">rfc/deprecate_dynamic_properties</a>
+    </nav>
+  </div>
+  <pre><code
+    data-sample="./examples/PHP_8.2/deprecated-dynamic-properties.php#2-99"></code></pre>
+</section>
+
+<section>
+  <h3>
+    Deprecated:
+    <span style="text-transform: lowercase">utf8_encode() / utf8_decode()</span>
+  </h3>
+  <div class="center">
+    <nav class="links">
+      <a href="https://wiki.php.net/rfc/remove_utf8_decode_and_utf8_encode">rfc/remove_utf8_decode_and_utf8_encode</a>
+    </nav>
+  </div>
+</section>
+
+<section>
+  <h3>
+    Deprecated: String Interpolation
+    <span style="text-transform: lowercase">${var}</span>
+  </h3>
+  <pre><code
+    data-sample="./examples/PHP_8.2/deprecated-string-interpolation.php#2-99"></code></pre>
+</section>
+
+<section>
+  <h3>
+    Deprecated: Callable Patterns
+  </h3>
+  <pre><code
+    data-sample="./examples/PHP_8.2/deprecated-callable.php#2-99"></code></pre>
+</section>
+
+<section>
+  <h3>
+    Locale-independent case conversion
+  </h3>
+  <pre data-badge-label="PHP 8.1"><code class="language-php">setlocale(LC_ALL, 'tr_TR');
+echo strtoupper('i'); // İ</code></pre>
+  <pre data-badge-label="PHP 8.2"><code class="language-php">setlocale(LC_ALL, 'tr_TR');
+echo strtoupper('i'); // I</code></pre>
+</section>

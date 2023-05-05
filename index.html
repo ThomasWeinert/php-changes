@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>PHP Changes</title>
+
+    <meta name="author" content="Thomas Weinert">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:website" content="@ThomasWeinert" />
+    <meta property="og:url" content="https://thomas.weinert.info/talk-php-7.4/" />
+    <meta property="og:title" content="Talk: PHP 7.4. Changes" />
+    <meta property="og:description" content="Showing off the new features and changes in PHP 7.4" />
+<!--    <meta property="og:image" content="" />-->
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="bower_components/reveal.js/css/theme/black.css" id="theme">
+
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/highlight.js/styles/idea.css">
+
+    <style type="text/css">
+      @media print {
+        body.print-pdf .slide-menu-button {
+          display: none;
+        }
+      }
+      .hljs-tag {
+        background-color: transparent;
+      }
+    </style>
+
+    <!--[if lt IE 9]>
+      <script src="bower_components/reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <style>
+      body > div.reveal {
+        background: radial-gradient(
+          ellipse at center,
+          rgba(255,255,255,0.1) 0%,
+          rgba(255,255,255,0.15) 50%,
+          rgba(255,255,255,0) 100%
+        );
+      }
+      ul.code {
+        font-family: monospace;
+      }
+
+      .reveal section ul li code,
+      .reveal code {
+        font-family: "Source Code Pro", monospace;
+      }
+      .reveal code .placeholder {
+        opacity: 0.65;
+      }
+      .reveal section img.scribble {
+        border: 1px solid silver;
+        background: white;
+        padding: 10px;
+        max-height: 500px;
+      }
+      .reveal section img.borderless {
+        border: none;
+        background: none;
+        padding: 0;
+        box-shadow: none;
+      }
+      .reveal .center {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      .reveal .links {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+      .reveal .links a {
+        font-size: 80%;
+      }
+      .reveal .links a:before {
+        content: '🔗';
+        display: inline-block;
+        margin-right: 0.3em;
+      }
+      .reveal .row {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="reveal" data-video="small top-right">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <section>
+            <h1>PHP Changes</h1>
+          </section>
+        </section>
+
+        <section data-external="php_8.3.html"></section>
+        <section data-external="php_8.2.html"></section>
+      </div>
+
+    </div>
+
+    <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+    <script src="bower_components/reveal.js/js/reveal.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        slideNumber: "c/t",
+
+        //showNotes: isPrintView ? true /*"separate-page" */ : false,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        //parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        //parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'bower_components/reveal_external/external/external.js' },
+          { src: 'bower_components/reveal.js-menu/menu.js' },
+          { src: 'bower_components/reveal-badges/src/badges.js' },
+          { src: 'bower_components/reveal-presenter-keys/src/presenter-keys.js' },
+          { src: 'bower_components/reveal-print/src/print.js' },
+          { src: 'bower_components/reveal-sampler/sampler.js' },
+
+          { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ],
+
+        menu: {
+          side: 'left',
+          markers: true,
+          numbers: false,
+          themes: [
+            { name: 'Black', theme: 'bower_components/reveal.js/css/theme/black.css' },
+            { name: 'White', theme: 'bower_components/reveal.js/css/theme/white.css' }
+          ]
+        },
+
+        badges: {
+          languages : true
+        },
+
+        presenter: {
+          profile: 'Lenovo Yoga Mouse'
+        },
+
+        sampler: {
+          proxyURL: document.location.href.match(/http:\/\/localhost/) ? 'proxy.php?file=' : '',
+          lineNumbers: 'original',
+        }
+
+      });
+
+    </script>
+
+  </body>
+</html>

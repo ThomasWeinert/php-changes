@@ -1,0 +1,156 @@
+<section>
+  <h2>PHP 8.3</h2>
+</section>
+
+<section>
+  <h3>Dynamic Class Constant Fetch</h3>
+  <div class="center">
+    <nav class="links">
+      <a href="https://wiki.php.net/rfc/dynamic_class_constant_fetch">rfc/dynamic_class_constant_fetch</a>
+    </nav>
+  </div>
+  <pre><code data-sample="./examples/PHP_8.3/class-constant-fetch.php#2-99" class="language-php"></code></pre>
+</section>
+
+<section>
+  <h3>Read Only Classes - Cloning</h3>
+  <div class="center">
+    <nav class="links">
+      <a href="https://wiki.php.net/rfc/readonly_amendments">rfc/readonly_amendments</a>
+    </nav>
+  </div>
+  <pre><code data-sample="./examples/PHP_8.3/readonly-classes.php#2-99" class="language-php"></code></pre>
+</section>
+
+<section>
+  <h3>Typed Class Constants</h3>
+  <div class="center">
+    <nav class="links">
+      <a href="https://wiki.php.net/rfc/typed_class_constants">rfc/typed_class_constants</a>
+    </nav>
+  </div>
+  <pre><code data-sample="./examples/PHP_8.3/typed-class-constants.php#2-13" class="language-php"></code></pre>
+</section>
+<section>
+  <h3>Typed Class Constants Implement/Extend</h3>
+  <div class="center">
+    <nav class="links">
+      <a href="https://wiki.php.net/rfc/typed_class_constants">rfc/typed_class_constants</a>
+    </nav>
+  </div>
+  <pre><code data-sample="./examples/PHP_8.3/typed-class-constants.php#15-99" class="language-php"></code></pre>
+</section>
+
+<section>
+  <h3>JSON Validate</h3>
+  <div class="center">
+    <nav class="links">
+      <a href="https://wiki.php.net/rfc/json_validate">rfc/json_validate</a>
+    </nav>
+  </div>
+  <pre><code data-sample="./examples/PHP_8.3/json-validate.php#2-99" class="language-php"></code></pre>
+</section>
+
+<section>
+  <h3>Unserialize</h3>
+  <div class="center">
+    <nav class="links">
+      <a href="https://wiki.php.net/rfc/improve_unserialize_error_handling">rfc/improve_unserialize_error_handling</a>
+    </nav>
+  </div>
+  <ul>
+    <li>UnserializationFailedException</li>
+  </ul>
+</section>
+
+<section>
+  <h3>Randomizer</h3>
+  <div class="center">
+    <nav class="links">
+      <a href="https://wiki.php.net/rfc/randomizer_additions">rfc/randomizer_additions</a>
+      <a href="https://www.php.net/manual/en/class.random-randomizer.php">manual/en/class.random-randomizer.php</a>
+    </nav>
+  </div>
+  <pre><code data-sample="./examples/PHP_8.3/randomizer.php#2-99" class="language-php"></code></pre>
+</section>
+
+<section>
+  <h3>Date/Time exceptions  (1/2)</h3>
+  <div class="center">
+    <nav class="links">
+      <a href="https://wiki.php.net/rfc/datetime-exceptions">rfc/datetime-exceptions</a>
+    </nav>
+  </div>
+  <ul>
+    <li>ValueError</li>
+    <li>DateError
+      <ul>
+        <li>DateRangeError</li>
+        <li>DateObjectError</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+<section>
+  <h3>Date/Time exceptions (2/2)</h3>
+  <div class="center">
+    <nav class="links">
+      <a href="https://wiki.php.net/rfc/datetime-exceptions">rfc/datetime-exceptions</a>
+    </nav>
+  </div>
+  <ul>
+    <li>DateException
+      <ul>
+        <li>DateInvalidTimeZoneException</li>
+        <li>DateInvalidOperationException</li>
+        <li>DateMalformedStringException</li>
+        <li>DateMalformedIntervalStringException</li>
+        <li>DateMalformedPeriodStringException</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h3>array_sum/array_product</h3>
+  <div class="center">
+    <nav class="links">
+      <a href="https://wiki.php.net/rfc/saner-array-sum-product">rfc/saner-array-sum-product</a>
+    </nav>
+  </div>
+</section>
+
+<section>
+  <h3>GC Status</h3>
+  <table style="font-size: 70%;">
+    <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td><code>running</code></td>
+      <td>Boolean</td>
+      <td><code>true</code> if the garbage collector is running. <code>false</code> otherwise.</td>
+    </tr>
+    <tr>
+      <td><code>protected</code></td>
+      <td>Boolean</td>
+      <td><code>true</code> if the garbage collector is protected and root additions are forbidden. <code>false</code> otherwise.</td>
+    </tr>
+    <tr>
+      <td><code>full</code></td>
+      <td>Boolean</td>
+      <td><code>true</code> if the garbage collector buffer size exceeds <code>GC_MAX_BUF_SIZE</code>. This is currently set to <code>0x40000000</code> (= 1024³.)</td>
+    </tr>
+    <tr>
+      <td><code>buffer_size</code></td>
+      <td>Integer</td>
+      <td>Current garbage collector buffer size.</td>
+    </tr>
+    </tbody>
+  </table>
+</section>

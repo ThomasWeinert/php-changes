@@ -1,0 +1,31 @@
+{
+  "name": "reveal_external",
+  "description": "Plugin for reveal.js to import external sections.",
+  "homepage": "https://github.com/janschoepke/reveal_external#readme",
+  "license": "MIT",
+  "authors": [
+    "Jan Schoepke"
+  ],
+  "keywords": [
+    "reveal",
+    "external",
+    "xhr"
+  ],
+  "main": [
+    "src/external.js"
+  ],
+  "ignore": [
+    "**/.*",
+    "example/"
+  ],
+  "_release": "6686d18bbf",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "6686d18bbf1fb7286473b5d351b547badffdf21d"
+  },
+  "_source": "https://github.com/janschoepke/reveal_external.git",
+  "_target": "*",
+  "_originalSource": "reveal_external",
+  "_direct": true
+}
